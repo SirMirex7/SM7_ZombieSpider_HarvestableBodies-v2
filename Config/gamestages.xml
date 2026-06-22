@@ -1,0 +1,29 @@
+<config>
+     <append xpath="/spawner/gamestage[number(@stage) &gt; 1]">
+         <group name="CustomGroup1"/>
+     </append>
+     <append xpath="/spawner/gamestage[number(@stage) &gt; 500]">
+         <group name="CustomGroup1"/>
+     </append>     
+     <append xpath="/spawner/gamestage[number(@stage) &gt; 1000]">
+         <group name="CustomGroup1"/>
+     </append>
+     <append xpath="/spawner/gamestage[number(@stage) &gt; 1500]">
+         <group name="CustomGroup1"/>
+     </append>
+     <append xpath="/spawner/gamestage[number(@stage) &gt; 2000]">
+         <group name="CustomGroup1"/>
+     </append>
+     <append xpath="/spawner/gamestage[number(@stage) &gt; 2500]">
+         <group name="CustomGroup1"/>
+     </append>
+     <append xpath="/spawner/gamestage[number(@stage) &gt; 3000]">
+         <group name="CustomGroup1"/>
+     </append>
+     <append xpath="/spawner/gamestage[number(@stage) &gt; 3500]">
+         <group name="CustomGroup1"/>
+     </append>
+     <append xpath="/spawner/gamestage[number(@stage) &gt; 4000]">
+         <group name="CustomGroup1"/>
+     </append>
+</config>

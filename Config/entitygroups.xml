@@ -1,0 +1,140 @@
+<config>
+     <!-- ================================================== -->
+     <!-- ADDING NEW ENTITYCLASSES TO EXISTING ENTITYGROUPS -->
+     <!-- Notes: Natural spawning -->
+     <!--         -->
+     <!-- ================================================== -->  
+     <append xpath="/entitygroups/entitygroup[@name='ZombiesAll']">
+         <e n="zombieSpiderWalker0" p="0.3"/> <!-- Normal -->  
+         <e n="zombieSpiderWalker1" p="0" /> <!-- Feral -->
+         <e n="zombieSpiderWalker2" p="0" /> <!-- Radiated -->
+         <e n="zombieSpiderWalker3" p="0" /> <!-- Charged -->
+         <e n="zombieSpiderWalker4" p="0" /> <!-- Infernal -->                   
+     </append>
+
+     <append xpath="/entitygroups/entitygroup[@name='ZombiesNight']">
+         <e n="zombieSpiderWalker0" /> <!-- Normal -->
+         <e n="zombieSpiderWalker1" p="0.25" /> <!-- Feral -->
+         <e n="zombieSpiderWalker2" p="0" /> <!-- Radiated -->
+         <e n="zombieSpiderWalker3" p="0" /> <!-- Charged -->
+         <e n="zombieSpiderWalker4" p="0" /> <!-- Infernal -->
+     </append>
+
+     <append xpath="/entitygroups/entitygroup[@name='ZombiesDowntown']">
+         <e n="zombieSpiderWalker0" /> <!-- Normal -->
+         <e n="zombieSpiderWalker1" p="0.5"/> <!-- Feral -->
+         <e n="zombieSpiderWalker2" p="0" /> <!-- Radiated -->
+         <e n="zombieSpiderWalker3" p="0" /> <!-- Charged -->
+         <e n="zombieSpiderWalker4" p="0" /> <!-- Infernal -->
+     </append>
+     
+     <append xpath="/entitygroups/entitygroup[@name='ZombiesForestDowntown']">
+         <e n="zombieSpiderWalker0" /> <!-- Normal -->
+         <e n="zombieSpiderWalker1" p="0.1" /> <!-- Feral -->
+         <e n="zombieSpiderWalker2" p="0" /> <!-- Radiated -->
+         <e n="zombieSpiderWalker3" p="0" /> <!-- Charged -->
+         <e n="zombieSpiderWalker4" p="0" /> <!-- Infernal -->
+     </append>
+
+     <append xpath="/entitygroups/entitygroup[@name='ZombiesForestDowntownNight']">
+         <e n="zombieSpiderWalker0" /> <!-- Normal -->
+         <e n="zombieSpiderWalker1" p="0.3" /> <!-- Feral -->
+         <e n="zombieSpiderWalker2" p="0" /> <!-- Radiated -->
+         <e n="zombieSpiderWalker3" p="0" /> <!-- Charged -->
+         <e n="zombieSpiderWalker4" p="0" /> <!-- Infernal -->
+     </append>
+
+     <append xpath="/entitygroups/entitygroup[@name='ZombiesBurntForest']">
+         <e n="zombieSpiderWalker0" /> <!-- Normal -->
+         <e n="zombieSpiderWalker1" p="0.3" /> <!-- Feral -->
+         <e n="zombieSpiderWalker2" p="0" /> <!-- Radiated -->
+         <e n="zombieSpiderWalker3" p="0" /> <!-- Charged -->
+         <e n="zombieSpiderWalker4" p="0" /> <!-- Infernal -->
+     </append>
+
+     <append xpath="/entitygroups/entitygroup[@name='ZombiesBurntForestNight']">
+         <e n="zombieSpiderWalker0" /> <!-- Normal -->
+         <e n="zombieSpiderWalker1" p="0.5" /> <!-- Feral -->
+         <e n="zombieSpiderWalker2" p="0" /> <!-- Radiated -->
+         <e n="zombieSpiderWalker3" p="0" /> <!-- Charged -->
+         <e n="zombieSpiderWalker4" p="0" /> <!-- Infernal -->
+     </append>
+
+     <append xpath="/entitygroups/entitygroup[@name='ZombiesDesert']">
+         <e n="zombieSpiderWalker0" /> <!-- Normal -->
+         <e n="zombieSpiderWalker1" p="0.3" /> <!-- Feral -->
+         <e n="zombieSpiderWalker2" p="0" /> <!-- Radiated -->
+         <e n="zombieSpiderWalker3" p="0" /> <!-- Charged -->
+         <e n="zombieSpiderWalker4" p="0" /> <!-- Infernal -->
+     </append>
+
+     <append xpath="/entitygroups/entitygroup[@name='ZombiesDesertNight']">
+         <e n="zombieSpiderWalker0" /> <!-- Normal -->
+         <e n="zombieSpiderWalker1" p="0.5" /> <!-- Feral -->
+         <e n="zombieSpiderWalker2" p="0" /> <!-- Radiated -->
+         <e n="zombieSpiderWalker3" p="0" /> <!-- Charged -->
+         <e n="zombieSpiderWalker4" p="0" /> <!-- Infernal -->
+     </append>
+
+     <append xpath="/entitygroups/entitygroup[@name='ZombiesSnow']">
+         <e n="zombieSpiderWalker0" /> <!-- Normal -->
+         <e n="zombieSpiderWalker1" p="0.3" /> <!-- Feral -->
+         <e n="zombieSpiderWalker2" p="0.1" /> <!-- Radiated -->
+         <e n="zombieSpiderWalker3" p="0" /> <!-- Charged -->
+         <e n="zombieSpiderWalker4" p="0" /> <!-- Infernal -->
+     </append>
+
+     <append xpath="/entitygroups/entitygroup[@name='ZombiesSnowNight']">
+         <e n="zombieSpiderWalker0" /> <!-- Normal -->
+         <e n="zombieSpiderWalker1" p="0.3" /> <!-- Feral -->
+         <e n="zombieSpiderWalker2" p="0.2" /> <!-- Radiated -->
+         <e n="zombieSpiderWalker3" p="0" /> <!-- Charged -->
+         <e n="zombieSpiderWalker4" p="0" /> <!-- Infernal -->
+     </append>
+
+     <append xpath="/entitygroups/entitygroup[@name='ZombiesWasteland']">
+         <e n="zombieSpiderWalker0" /> <!-- Normal -->
+         <e n="zombieSpiderWalker1" p="0.15" /> <!-- Feral -->
+         <e n="zombieSpiderWalker2" p="0.2" /> <!-- Radiated -->
+         <e n="zombieSpiderWalker3" p="0.2" /> <!-- Charged -->
+         <e n="zombieSpiderWalker4" p="0.5" /> <!-- Infernal -->
+     </append>
+
+     <append xpath="/entitygroups/entitygroup[@name='ZombiesAllWasteland']">
+         <e n="zombieSpiderWalker0" /> <!-- Normal -->
+         <e n="zombieSpiderWalker1" p="0.15" /> <!-- Feral -->
+         <e n="zombieSpiderWalker2" p="0.3" /> <!-- Radiated -->
+         <e n="zombieSpiderWalker3" p="0.3" /> <!-- Charged -->
+         <e n="zombieSpiderWalker4" p="0.5" /> <!-- Infernal -->
+     </append>
+
+     <append xpath="/entitygroups/entitygroup[@name='ZombiesWastelandNight']">
+         <e n="zombieSpiderWalker0" /> <!-- Normal -->
+         <e n="zombieSpiderWalker1" p="0.15" /> <!-- Feral -->
+         <e n="zombieSpiderWalker2" p="0.3" /> <!-- Radiated -->
+         <e n="zombieSpiderWalker3" p="0.3" /> <!-- Charged -->
+         <e n="zombieSpiderWalker4" p="0.5" /> <!-- Infernal -->
+     </append>
+
+     <append xpath="/entitygroups/entitygroup[@name='ZombiesWastelandDowntown']">
+         <e n="zombieSpiderWalker0" /> <!-- Normal -->
+         <e n="zombieSpiderWalker1" p="0.15" /> <!-- Feral -->
+         <e n="zombieSpiderWalker2" p="0.3" /> <!-- Radiated -->
+         <e n="zombieSpiderWalker3" p="0.3" /> <!-- Charged -->
+         <e n="zombieSpiderWalker4" p="0.5" /> <!-- Infernal -->
+     </append>
+
+     <!-- ================================================== -->
+     <!-- ADDING NEW ENTITYGROUPS -->
+     <!-- Notes: FOR BLOOD MOON -->
+     <!--        Added reference to gamestages.xml -->
+     <!-- ================================================== -->    
+     <append xpath="/entitygroups/entitygroup[@name='zombiesHordeStage']">
+         <e n="zombieSpiderWalker0" /> <!-- Normal -->
+         <e n="zombieSpiderWalker1" /> <!-- Feral -->
+         <e n="zombieSpiderWalker2" /> <!-- Radiated -->
+         <e n="zombieSpiderWalker3" /> <!-- Charged -->
+         <e n="zombieSpiderWalker4" /> <!-- Infernal -->
+         
+     </append>
+</config>
