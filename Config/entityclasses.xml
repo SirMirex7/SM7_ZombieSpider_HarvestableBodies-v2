@@ -136,6 +136,34 @@
          </entity_class>
 
      <!-- ================================================== -->
+     <!-- Testing all Walking Types... -->
+     <!-- Notes: Only 8x different walk types... -->
+     <!-- ================================================== -->
+         <entity_class name="zombieTest00" extends="zombieSpider"> <!--  -->
+             <property name="WalkType" value="7"/>
+         </entity_class>
+         <entity_class name="zombieTest01" extends="zombieSpider"> <!--  -->
+             <property name="WalkType" value="3"/>
+         </entity_class>
+         <entity_class name="zombieTest02" extends="zombieSpider"> <!--  -->
+             <property name="WalkType" value="5"/>
+         </entity_class>
+         <entity_class name="zombieTest03" extends="zombieSpider"> <!--  -->
+             <property name="WalkType" value="6"/>
+         </entity_class>
+         <entity_class name="zombieTest04" extends="zombieSpider"> <!--  -->
+             <property name="WalkType" value="2"/>
+         </entity_class>
+         <entity_class name="zombieTest05" extends="zombieSpider"> <!-- Spider -->
+             <property name="WalkType" value="22"/>
+         </entity_class>
+         <entity_class name="zombieTest06" extends="zombieSpider"> <!--  -->
+             <property name="WalkType" value="1"/>
+         </entity_class>
+         <entity_class name="zombieTest07" extends="zombieSpider"> <!-- Crawler -->
+             <property name="WalkType" value="21"/>
+         </entity_class>
+     <!-- ================================================== -->
      <!-- WIP / EXPERIMENTATION -->
      <!-- Notes: Mixing zombies prefabs but using existing zombies "abilities" -->
      <!-- ================================================== -->
@@ -154,24 +182,41 @@
 </config>
 <!-- 
 ================================================== 
-TO DO (Homework)
-     T1: Add above Zombie Entities spawn naturally in the world...
-         Add to `entitygroups.xml`
-     T2: Add above Zombie Entities spawn in Bloodmoon
-         Add to `gamestages.xml`
-     T3: Add above Zombie Entities spawn with Churchbells
-         Add to `gamestages.xml`
+Homework
+[]       T1: Add above Zombie Entities spawn naturally in the world...
+             Add to `entitygroups.xml`
+                 (1) append existing Biome Groups... check lines 14 to 366
+                     For natural spawning...  
+                 (2) insert new Biome Groups... check lines 368 to 406
+                     For adding to existing GameStages for Blood Moon and Church Bell spawns
+[]       T2: Add above Zombie Entities spawn in Bloodmoon
+             Add to `gamestages.xml`
+                 (1) append into existing GameStages... is there a way to append to all above 1 to 300, 301 to 500 etc?
+                     number(@stage) > X
+[]       T3: Add above Zombie Entities spawn with Churchbells
+             blocks.xml = churchBell...
+                 <property name="Tags" value="challenge_mech_parts,churchbell" />
+             buffs.xml 
+                 <triggered_effect trigger="onSelfDamagedBlock" action="CallGameEvent" event="block_bell_spawn">
+				     <requirement name="TriggerHasTags" tags="churchbell"/>
+			     </triggered_effect>                 
+             gameevents.xml
+                 <action_sequence name="block_bell_spawn">
+                 <action class="SpawnEntity">
+			         <property name="entity_group" value="SleeperGSList"/>
+             gamestages.xml
+                 <group name="1GroupGenericZombie" spawner="SleeperGSList"/>
 ================================================== 
-TO DO (out of scope Homework)
-     T1: play around with the property below... see if I can make each of the variants behave differently... 
-         <property name="AITask" value="
-         <property name="AITarget" value"
-     T2: Add random Entity to test WalkType differences and figure out which one is best... perhaps each variant has a different walk type.
+EXTRA (out of scope Homework)
+[]       T1: play around with the property below... see if I can make each of the variants behave differently... 
+             <property name="AITask" value="
+             <property name="AITarget" value"
+[DONE]   T2: Add random Entity to test WalkType differences and figure out which one is best... perhaps each variant has a different walk type.
 ================================================== 
 QUESTIONS FOR CLASS | 2026-06-28
-     Q1: What is below used for? I added it for the sake of it as I saw it in all of the spider variants
-         <property name="PreviousTier"
-     Q2: 
-     Q3: 
+[]       Q1: What is below used for? I added it for the sake of it as I saw it in all of the spider variants
+             <property name="PreviousTier"
+[]       Q2: See Homework T3 above... where/how are zombie entities defined for SleeperGSList ?
+[]       Q3: 
 ==================================================
 -->
