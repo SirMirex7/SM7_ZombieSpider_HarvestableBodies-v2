@@ -1,0 +1,177 @@
+<config>
+     <insertAfter xpath="/entity_classes/color[last()]">
+         <color name="saltygold" value=".98,.867,.29, .55"/>
+         <color name="saltyred" value=".925,.259,.094, .55"/>
+     </insertAfter>
+    
+     <!-- ================================================== -->
+     <!-- VANILLA CHANGES -->
+     <!-- Notes: Making zombies harvestable and stay in the world longer after death-->
+     <!--        Made it so Players hit the body instead of dropping a carcass / dead body block -->
+     <!-- ================================================== -->    
+     <insertAfter xpath="/entity_classes/entity_class/property[@name='Tags' and contains(@value, 'zombie')]/..//property[last()]">       
+         <property name="DeadBodyHitPoints" value="350"/>
+         <drop event="Harvest" name="foodRawMeat" count="0" tool_category="Butcher"/>
+         <drop event="Harvest" name="foodRottingFlesh" tag="butcherHarvest" count="0,3"/>
+         <drop event="Harvest" name="resourcePotassiumNitratePowder" tag="butcherHarvest" count="2,10"/>
+	     <drop event="Harvest" name="resourceBone" tag="butcherHarvest" count="9"/>
+	     <drop event="Harvest" name="resourceBone" tag="allToolsHarvest" count="3"/>
+     </insertAfter>
+
+     <!-- ================================================== -->
+     <!-- NEW ENTITIES -->
+     <!-- Notes: Spider Zombies that walks -->
+     <!--        0 Normal,      1 Feral,            2 Radiated,             3 Charged,              4 Infernal -->
+     <!--        zombieSpider,  zombieSpiderFeral,  zombieSpiderRadiated,   zombieSpiderCharged,    zombieSpiderInfernal -->
+     <!-- ================================================== -->
+     <append xpath="/entity_classes">
+         <entity_class name="zombieSpiderWalker0" extends="zombieSpider"> <!--Extends from zombieTemplateMale -->
+             <property name="WalkType" value="7"/> 
+             <property name="TimeStayAfterDeath" value="300"/>
+             <property name="DeadBodyHitPoints" value="450"/>
+             <!-- <property name="CorpseBlock" value="goreBlockHumanCorpse"/> -->
+             <drop event="Harvest" name="foodRawMeat" count="0" tool_category="Butcher"/>
+             <drop event="Harvest" name="foodRottingFlesh" tag="butcherHarvest" count="0,3"/>
+             <drop event="Harvest" name="resourcePotassiumNitratePowder" tag="butcherHarvest" count="2,10"/>
+	         <drop event="Harvest" name="resourceBone" tag="butcherHarvest" count="9"/>
+	         <drop event="Harvest" name="resourceBone" tag="allToolsHarvest" count="3"/>
+             <property name="AITask" value="
+             BreakBlock|
+	         DestroyArea|
+	         Territorial|
+	         ApproachDistraction|
+	         ApproachAndAttackTarget class=EntityPlayer,0,EntityBandit,0,EntityEnemyAnimal,0,EntityAnimal|
+	         ApproachSpot|
+	         Look|
+	         Wander|
+	         "/>
+         </entity_class>
+         <entity_class name="zombieSpiderWalker1" extends="zombieSpiderFeral">
+             <property name="PreviousTier" value="zombieSpiderWalker0"/>
+             <property name="WalkType" value="7"/> 
+             <property name="TimeStayAfterDeath" value="300"/>
+             <property name="DeadBodyHitPoints" value="450"/>
+             <!-- <property name="CorpseBlock" value="goreBlockHumanCorpse"/> -->
+             <drop event="Harvest" name="foodRawMeat" count="0" tool_category="Butcher"/>
+             <drop event="Harvest" name="foodRottingFlesh" tag="butcherHarvest" count="0,3"/>
+             <drop event="Harvest" name="resourcePotassiumNitratePowder" tag="butcherHarvest" count="2,10"/>
+	         <drop event="Harvest" name="resourceBone" tag="butcherHarvest" count="9"/>
+	         <drop event="Harvest" name="resourceBone" tag="allToolsHarvest" count="3"/>
+             <property name="AITask" value="
+             BreakBlock|
+	         DestroyArea|
+	         Territorial|
+	         ApproachDistraction|
+	         ApproachAndAttackTarget class=EntityPlayer,0,EntityBandit,0,EntityEnemyAnimal,0,EntityAnimal|
+	         ApproachSpot|
+	         Look|
+	         Wander|
+	         "/>
+         </entity_class>
+         <entity_class name="zombieSpiderWalker2" extends="zombieSpiderRadiated">
+             <property name="PreviousTier" value="zombieSpiderWalker1"/>
+             <property name="WalkType" value="7"/> 
+             <property name="TimeStayAfterDeath" value="300"/>
+             <property name="DeadBodyHitPoints" value="450"/>
+             <!-- <property name="CorpseBlock" value="goreBlockHumanCorpse"/> -->
+             <drop event="Harvest" name="foodRawMeat" count="0" tool_category="Butcher"/>
+             <drop event="Harvest" name="foodRottingFlesh" tag="butcherHarvest" count="0,3"/>
+             <drop event="Harvest" name="resourcePotassiumNitratePowder" tag="butcherHarvest" count="2,10"/>
+	         <drop event="Harvest" name="resourceBone" tag="butcherHarvest" count="9"/>
+	         <drop event="Harvest" name="resourceBone" tag="allToolsHarvest" count="3"/>
+             <property name="AITask" value="
+             BreakBlock|
+	         DestroyArea|
+	         Territorial|
+	         ApproachDistraction|
+	         ApproachAndAttackTarget class=EntityPlayer,0,EntityBandit,0,EntityEnemyAnimal,0,EntityAnimal|
+	         ApproachSpot|
+	         Look|
+	         Wander|
+	         "/>
+         </entity_class>
+         <entity_class name="zombieSpiderWalker3" extends="zombieSpiderCharged">
+             <property name="PreviousTier" value="zombieSpiderWalker2"/>         
+             <property name="WalkType" value="7"/> 
+             <property name="TimeStayAfterDeath" value="300"/>
+             <property name="DeadBodyHitPoints" value="450"/>
+             <!-- <property name="CorpseBlock" value="goreBlockHumanCorpse"/> -->
+             <drop event="Harvest" name="foodRawMeat" count="0" tool_category="Butcher"/>
+             <drop event="Harvest" name="foodRottingFlesh" tag="butcherHarvest" count="0,3"/>
+             <drop event="Harvest" name="resourcePotassiumNitratePowder" tag="butcherHarvest" count="2,10"/>
+	         <drop event="Harvest" name="resourceBone" tag="butcherHarvest" count="9"/>
+	         <drop event="Harvest" name="resourceBone" tag="allToolsHarvest" count="3"/>
+             <property name="AITask" value="
+             BreakBlock|
+	         DestroyArea|
+	         Territorial|
+	         ApproachDistraction|
+	         ApproachAndAttackTarget class=EntityPlayer,0,EntityBandit,0,EntityEnemyAnimal,0,EntityAnimal|
+	         ApproachSpot|
+	         Look|
+	         Wander|
+	         "/>
+         </entity_class>
+         <entity_class name="zombieSpiderWalker4" extends="zombieSpiderInfernal">
+             <property name="PreviousTier" value="zombieSpiderWalker3"/>
+             <property name="WalkType" value="7"/> 
+             <property name="TimeStayAfterDeath" value="300"/>
+             <property name="DeadBodyHitPoints" value="450"/>
+             <!-- <property name="CorpseBlock" value="goreBlockHumanCorpse"/> -->
+             <drop event="Harvest" name="foodRawMeat" count="0" tool_category="Butcher"/>
+             <drop event="Harvest" name="foodRottingFlesh" tag="butcherHarvest" count="0,3"/>
+             <drop event="Harvest" name="resourcePotassiumNitratePowder" tag="butcherHarvest" count="2,10"/>
+	         <drop event="Harvest" name="resourceBone" tag="butcherHarvest" count="9"/>
+	         <drop event="Harvest" name="resourceBone" tag="allToolsHarvest" count="3"/>
+             <property name="AITask" value="
+             BreakBlock|
+	         DestroyArea|
+	         Territorial|
+	         ApproachDistraction|
+	         ApproachAndAttackTarget class=EntityPlayer,0,EntityBandit,0,EntityEnemyAnimal,0,EntityAnimal|
+	         ApproachSpot|
+	         Look|
+	         Wander|
+	         "/>
+         </entity_class>
+
+     <!-- ================================================== -->
+     <!-- WIP / EXPERIMENTATION -->
+     <!-- Notes: Mixing zombies prefabs but using existing zombies "abilities" -->
+     <!-- ================================================== -->
+         <entity_class name="zombieFloatingCrawlerBoomer0" extends="zombieFatCop">
+             <property name="Mesh" value="@:Entities/Zombies/Crawler/ZCrawler.prefab"/>
+             <property name="WalkType" value="6"/> 
+             <property name="MatColor" value="saltyred"/>
+         </entity_class>          
+
+         <entity_class name="zombieFloatingCrawlerBoomer1" extends="zombieFatCop">
+             <property name="Mesh" value="@:Entities/Zombies/Crawler/ZCrawler.prefab"/>
+             <property name="WalkType" value="6"/> 
+             <property name="MatColor" value="saltygold"/>
+         </entity_class> 
+     </append>
+</config>
+<!-- 
+================================================== 
+TO DO (Homework)
+     T1: Add above Zombie Entities spawn naturally in the world...
+         Add to `entitygroups.xml`
+     T2: Add above Zombie Entities spawn in Bloodmoon
+         Add to `gamestages.xml`
+     T3: Add above Zombie Entities spawn with Churchbells
+         Add to `gamestages.xml`
+================================================== 
+TO DO (out of scope Homework)
+     T1: play around with the property below... see if I can make each of the variants behave differently... 
+         <property name="AITask" value="
+         <property name="AITarget" value"
+     T2: Add random Entity to test WalkType differences and figure out which one is best... perhaps each variant has a different walk type.
+================================================== 
+QUESTIONS FOR CLASS | 2026-06-28
+     Q1: What is below used for? I added it for the sake of it as I saw it in all of the spider variants
+         <property name="PreviousTier"
+     Q2: 
+     Q3: 
+==================================================
+-->
