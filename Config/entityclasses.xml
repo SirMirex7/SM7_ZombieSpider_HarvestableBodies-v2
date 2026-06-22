@@ -185,12 +185,13 @@
 Homework
 []       T1: Add above Zombie Entities spawn naturally in the world...
              Add to `entitygroups.xml`
-                 (1) append existing Biome Groups... check lines 14 to 366
+[DONE]           (1) append existing Biome Groups... check lines 14 to 366
                      For natural spawning...  
                  (2) insert new Biome Groups... check lines 368 to 406
                      For adding to existing GameStages for Blood Moon and Church Bell spawns
 []       T2: Add above Zombie Entities spawn in Bloodmoon
              Add to `gamestages.xml`
+                 <spawner name="BloodMoonHorde">
                  (1) append into existing GameStages... is there a way to append to all above 1 to 300, 301 to 500 etc?
                      number(@stage) > X
 []       T3: Add above Zombie Entities spawn with Churchbells
