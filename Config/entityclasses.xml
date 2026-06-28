@@ -189,12 +189,12 @@ Homework
                      For natural spawning...  
                  (2) insert new Biome Groups... check lines 368 to 406
                      For adding to existing GameStages for Blood Moon and Church Bell spawns
-[]       T2: Add above Zombie Entities spawn in Bloodmoon
+[DONE]   T2: Add above Zombie Entities spawn in Bloodmoon
              Add to `gamestages.xml`
                  <spawner name="BloodMoonHorde">
                  (1) append into existing GameStages... is there a way to append to all above 1 to 300, 301 to 500 etc?
                      number(@stage) > X
-[]       T3: Add above Zombie Entities spawn with Churchbells
+[DONE]   T3: Add above Zombie Entities spawn with Churchbells
              blocks.xml = churchBell...
                  <property name="Tags" value="challenge_mech_parts,churchbell" />
              buffs.xml 
@@ -217,7 +217,8 @@ EXTRA (out of scope Homework)
 QUESTIONS FOR CLASS | 2026-06-28
 []       Q1: What is below used for? I added it for the sake of it as I saw it in all of the spider variants
              <property name="PreviousTier"
-[]       Q2: See Homework T3 above... where/how are zombie entities defined for SleeperGSList ?
+[X]      Q2: See Homework T3 above... where/how are zombie entities defined for SleeperGSList ?
+             Answer: gamestages.xml further down the file... check line 2488
 []       Q3: 
 ==================================================
 -->

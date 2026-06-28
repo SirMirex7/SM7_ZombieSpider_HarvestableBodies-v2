@@ -1,29 +1,13 @@
 <config>
-     <append xpath="/spawner/gamestage[number(@stage) &gt; 1]">
-         <group name="CustomGroup1"/>
+     <append xpath="/gamestages/spawner[@name='BloodMoonHorde']/gamestage[number(@stage) &gt; 1][number(@stage) &lt;= 500]">
+         <spawn group="BM_SpiderWalkers_Early" num="5" maxAlive="2"/>
      </append>
-     <append xpath="/spawner/gamestage[number(@stage) &gt; 500]">
-         <group name="CustomGroup1"/>
+
+     <append xpath="/gamestages/spawner[@name='BloodMoonHorde']/gamestage[number(@stage) &gt; 500][number(@stage) &lt;= 2000]">
+         <spawn group="BM_SpiderWalkers_Mid" num="8" maxAlive="3"/>
      </append>     
-     <append xpath="/spawner/gamestage[number(@stage) &gt; 1000]">
-         <group name="CustomGroup1"/>
-     </append>
-     <append xpath="/spawner/gamestage[number(@stage) &gt; 1500]">
-         <group name="CustomGroup1"/>
-     </append>
-     <append xpath="/spawner/gamestage[number(@stage) &gt; 2000]">
-         <group name="CustomGroup1"/>
-     </append>
-     <append xpath="/spawner/gamestage[number(@stage) &gt; 2500]">
-         <group name="CustomGroup1"/>
-     </append>
-     <append xpath="/spawner/gamestage[number(@stage) &gt; 3000]">
-         <group name="CustomGroup1"/>
-     </append>
-     <append xpath="/spawner/gamestage[number(@stage) &gt; 3500]">
-         <group name="CustomGroup1"/>
-     </append>
-     <append xpath="/spawner/gamestage[number(@stage) &gt; 4000]">
-         <group name="CustomGroup1"/>
+
+     <append xpath="/gamestages/spawner[@name='BloodMoonHorde']/gamestage[number(@stage) &gt; 2000]">
+         <spawn group="BM_SpiderWalkers_Late" num="12" maxAlive="4"/>
      </append>
 </config>
