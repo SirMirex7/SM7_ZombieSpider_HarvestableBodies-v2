@@ -141,27 +141,107 @@
      <!-- ================================================== -->
          <entity_class name="zombieTest00" extends="zombieSpider"> <!--  -->
              <property name="WalkType" value="7"/>
+             <property name="AITask" value="
+             BreakBlock|
+	         DestroyArea|
+	         Territorial|
+	         ApproachDistraction|
+	         ApproachAndAttackTarget class=EntityPlayer,0,EntityBandit,0,EntityEnemyAnimal,0,EntityAnimal|
+	         ApproachSpot|
+	         Look|
+	         Wander|
+	         "/>             
          </entity_class>
          <entity_class name="zombieTest01" extends="zombieSpider"> <!--  -->
              <property name="WalkType" value="3"/>
+             <property name="AITask" value="
+             BreakBlock|
+	         DestroyArea|
+	         Territorial|
+	         ApproachDistraction|
+	         ApproachAndAttackTarget class=EntityPlayer,0,EntityBandit,0,EntityEnemyAnimal,0,EntityAnimal|
+	         ApproachSpot|
+	         Look|
+	         Wander|
+	         "/>
          </entity_class>
          <entity_class name="zombieTest02" extends="zombieSpider"> <!--  -->
              <property name="WalkType" value="5"/>
+             <property name="AITask" value="
+             BreakBlock|
+	         DestroyArea|
+	         Territorial|
+	         ApproachDistraction|
+	         ApproachAndAttackTarget class=EntityPlayer,0,EntityBandit,0,EntityEnemyAnimal,0,EntityAnimal|
+	         ApproachSpot|
+	         Look|
+	         Wander|
+	         "/>
          </entity_class>
          <entity_class name="zombieTest03" extends="zombieSpider"> <!--  -->
              <property name="WalkType" value="6"/>
+             <property name="AITask" value="
+             BreakBlock|
+	         DestroyArea|
+	         Territorial|
+	         ApproachDistraction|
+	         ApproachAndAttackTarget class=EntityPlayer,0,EntityBandit,0,EntityEnemyAnimal,0,EntityAnimal|
+	         ApproachSpot|
+	         Look|
+	         Wander|
+	         "/>
          </entity_class>
          <entity_class name="zombieTest04" extends="zombieSpider"> <!--  -->
              <property name="WalkType" value="2"/>
+             <property name="AITask" value="
+             BreakBlock|
+	         DestroyArea|
+	         Territorial|
+	         ApproachDistraction|
+	         ApproachAndAttackTarget class=EntityPlayer,0,EntityBandit,0,EntityEnemyAnimal,0,EntityAnimal|
+	         ApproachSpot|
+	         Look|
+	         Wander|
+	         "/>
          </entity_class>
          <entity_class name="zombieTest05" extends="zombieSpider"> <!-- Spider -->
              <property name="WalkType" value="22"/>
+             <property name="AITask" value="
+             BreakBlock|
+	         DestroyArea|
+	         Territorial|
+	         ApproachDistraction|
+	         ApproachAndAttackTarget class=EntityPlayer,0,EntityBandit,0,EntityEnemyAnimal,0,EntityAnimal|
+	         ApproachSpot|
+	         Look|
+	         Wander|
+	         "/>
          </entity_class>
          <entity_class name="zombieTest06" extends="zombieSpider"> <!--  -->
              <property name="WalkType" value="1"/>
+             <property name="AITask" value="
+             BreakBlock|
+	         DestroyArea|
+	         Territorial|
+	         ApproachDistraction|
+	         ApproachAndAttackTarget class=EntityPlayer,0,EntityBandit,0,EntityEnemyAnimal,0,EntityAnimal|
+	         ApproachSpot|
+	         Look|
+	         Wander|
+	         "/>
          </entity_class>
          <entity_class name="zombieTest07" extends="zombieSpider"> <!-- Crawler -->
              <property name="WalkType" value="21"/>
+             <property name="AITask" value="
+             BreakBlock|
+	         DestroyArea|
+	         Territorial|
+	         ApproachDistraction|
+	         ApproachAndAttackTarget class=EntityPlayer,0,EntityBandit,0,EntityEnemyAnimal,0,EntityAnimal|
+	         ApproachSpot|
+	         Look|
+	         Wander|
+	         "/>
          </entity_class>
      <!-- ================================================== -->
      <!-- WIP / EXPERIMENTATION -->

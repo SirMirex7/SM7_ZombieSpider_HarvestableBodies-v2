@@ -173,7 +173,8 @@
      <!-- ================================================== -->    
      <append xpath="/entitygroups">
          <entitygroup name="BM_SpiderWalkers_Early">
-             <e n="zombieSpiderWalker0" /> 
+             <e n="zombieSpiderWalker0" p="1.0" /> 
+             <e n="zombieSpiderWalker1" p="0.15" />
          </entitygroup>
 
          <entitygroup name="BM_SpiderWalkers_Mid">
@@ -196,8 +197,55 @@
      <!--        0 Normal,             1 Feral,             2 Radiated,            3 Charged,              4 Infernal -->
      <!--        zombieSpiderWalker0,  zombieSpiderWalker1,  zombieSpiderWalker2,   zombieSpiderWalker3,    zombieSpiderWalker4 -->
      <!-- ================================================== --> 
-     <append xpath="/entitygroups/entitygroup[@name='SleeperGSList']">
-         <e n="zombieSpiderWalker0" p="0.25"/>
-         <e n="zombieSpiderWalker1" p="0.10"/>
+     
+     <!--
+     <append xpath="/entitygroups/entitygroup[@name='sleeperHordeStageGS11']">
+         <e n="zombieSpiderWalker0" p="1"/>
+         <e n="zombieSpiderWalker1" p="1"/>
+     </append>
+     <append xpath="/entitygroups/entitygroup[@name='sleeperHordeStageGS14']">
+         <e n="zombieSpiderWalker0" p="1"/>
+         <e n="zombieSpiderWalker1" p="1"/>
+     </append>
+     -->
+     
+     <!-- [contains(@name ... also works...  -->
+     <append xpath="/entitygroups/entitygroup[number(substring-after(/entitygroups/entitygroup[starts-with(@name, 'sleeperHordeStage')]/@name, 'GS')) &gt; 1 and number(substring-after(/entitygroups/entitygroup[starts-with(@name, 'sleeperHordeStage')]/@name, 'GS')) &lt; 200]">
+         <e n="zombieSpiderWalker0" />
+         <e n="zombieSpiderWalker1" />         
+     </append> 
+     <append xpath="/entitygroups/entitygroup[number(substring-after(/entitygroups/entitygroup[starts-with(@name, 'sleeperHordeStage')]/@name, 'GS')) &gt; 200 and number(substring-after(/entitygroups/entitygroup[starts-with(@name, 'sleeperHordeStage')]/@name, 'GS')) &lt; 500]">
+         <e n="zombieSpiderWalker2" />
+         <e n="zombieSpiderWalker3" />         
+     </append> 
+     <append xpath="/entitygroups/entitygroup[number(substring-after(/entitygroups/entitygroup[starts-with(@name, 'sleeperHordeStage')]/@name, 'GS')) &gt; 500]">
+         <e n="zombieSpiderWalker4" p="3"/>        
+     </append> 
+
+     <!-- better way of doing it... same result... 
+
+     <append xpath="/entitygroups/entitygroup[starts-with(@name, 'sleeperHordeStage') and number(substring-after(@name, 'GS')) &gt; 50 and number(substring-after(@name, 'GS')) &lt; 200]""
+         <e n="zombieSpiderWalker0" p="3"/>
+     </append>
+     
+     -->
+
+     <!-- ================================================== -->
+     <!-- ADDING TO BLOOD MOON HORDE -->
+     <!-- Notes: FOR BLOOD MOON -->
+     <!--        0 Normal,             1 Feral,             2 Radiated,            3 Charged,              4 Infernal -->
+     <!--        zombieSpiderWalker0,  zombieSpiderWalker1,  zombieSpiderWalker2,   zombieSpiderWalker3,    zombieSpiderWalker4 -->
+     <!-- ================================================== --> 
+     <append xpath="/entitygroups/entitygroup[@name='BloodMoonHorde']">
+         <e n="zombieSpiderWalker0" p="10"/>
+         <e n="zombieSpiderWalker1" p="10"/>
+         <e n="zombieSpiderWalker2" p="10"/>
+         <e n="zombieSpiderWalker3" p="10"/>
+         <e n="zombieSpiderWalker4" p="10"/>
      </append>
 </config>
+<!-- 
+     Just a refresher on how to use remove / set... 
+     <remove xpath="/entitygroups/entitygroup[@name='EnemyAnimalsWasteland']/e[@n='none']"/> 
+     <set xpath="/entitygroups/entitygroup[@name='EnemyAnimalsWasteland']/e[@n='none']/@p">0</set> 
+-->
